@@ -1,14 +1,14 @@
 // assegno le costanti del mio script
 let difficuly = prompt("inserisci la difficoltà (facile, medio, difficile)");
-const delay = 3;
+const delay = 32;
 const maxNumber = 100;
 const numbersOnDom = document.getElementById("random-numbers");
 numbersOnDom.style = "text-align: center; color: red;"
 while (difficuly != "facile" && difficuly != "medio" && difficuly != "difficile") {
     difficuly = prompt("inserisci la difficoltà (facile, medio, difficile)");
 }
+// switch per selezionare la difficoltà
 let NumberOfNumber;
-
 switch (difficuly) {
     case "facile":
         NumberOfNumber = 5;
@@ -20,7 +20,6 @@ switch (difficuly) {
         NumberOfNumber = 20;
         break 
 } 
-
 // funzione che genera n prompt e controlla che siano diversi e controllo che siano numeri maggiori di 0 e minori di maxNumber
 function getPrompt (numOfPrompt, maxPromptValue) {
     let choosedNumbers = [];
